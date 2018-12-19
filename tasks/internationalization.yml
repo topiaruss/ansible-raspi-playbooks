@@ -21,15 +21,15 @@
 #       
 
 # Configure /etc/locale.gen values
-- name: Configure option values in /etc/locale.gen file.
-  become: yes
-  lineinfile:
-    dest: /etc/locale.gen
-    regexp: "{{ item.regexp }}"
-    line: "{{ item.line }}"
-    insertafter: EOF
-    state: present
-  with_items: "{{ locale_options }}"
+#- name: Configure option values in /etc/locale.gen file.
+#  become: yes
+#  lineinfile:
+#    dest: /etc/locale.gen
+#    regexp: "{{ item.regexp }}"
+#    line: "{{ item.line }}"
+#    insertafter: EOF
+#    state: present
+#  with_items: "{{ locale_options }}"
 
 # Generate Locale
 - name: Generate Locale

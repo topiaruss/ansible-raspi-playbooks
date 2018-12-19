@@ -78,7 +78,12 @@ Once the hosts file is in place the ansible controller is all set up and ready t
 ## Raspbian and RetroPie default Installations
 The first step of my setup workflow is to run the new-default.yml playbook from the playbooks folder.  
 
-This playbook asumes you have the latest version of [RetroPie](https://retropie.org.uk/download/) or [raspbian](https://www.raspberrypi.org/downloads/raspbian/) installed on a SD card and connected to the network via ethernet.
+This playbook assumes you have the latest version of [RetroPie](https://retropie.org.uk/download/) or [raspbian](https://www.raspberrypi.org/downloads/raspbian/) installed on a SD card and connected to the network via ethernet.
+
+In raspbian, on the SSD while mounted on the initialisation host (OSX in this case), do something like
+```bash
+touch /Volumes/boot/ssh
+``` 
 
 The new-default.yml playbook will do the following for hosts named "raspberrypi" or "retropie":
 
